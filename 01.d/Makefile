@@ -2,6 +2,7 @@
 # 		Pete's Challenge
 #
 #http://patorjk.com/software/taag/#p=display&f=Big&t=Version%202
+# https://www.gnu.org/software/make/manual/make.html
 
 
 # 
@@ -14,7 +15,29 @@
 # |_|  |_|\__,_|_|_| |_|
 
 %:
-	@:$(call capitalize3,$*)
+	@:$(call capitalize4,$*)
+	$(info $(idxs))
+
+
+
+
+
+
+# __      __           _               _  _
+# \ \    / /          (_)             | || |
+#  \ \  / /__ _ __ ___ _  ___  _ __   | || |_
+#   \ \/ / _ \ '__/ __| |/ _ \| '_ \  |__   _|
+#    \  /  __/ |  \__ \ | (_) | | | |    | |
+#     \/ \___|_|  |___/_|\___/|_| |_|    |_|
+
+idxs   := $(shell for i in `seq 0 25` ; do echo -ne "$$i "; done; echo -e "\n")
+#idxs := $(shell echo hi)
+lowers := a b c d e f g h i j k l m n o p q r s t u v w x y z
+uppers := A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+capitalize4 = $(info \
+									$(foreach i,$(lowers),$(info $(i))) \
+							)
+
 
 
 

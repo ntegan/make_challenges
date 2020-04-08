@@ -33,3 +33,26 @@ GNU make
 @:  is a weird construct I happened across
 2:13
 not in the documentation
+
+
+
+
+
+
+
+
+
+
+
+
+
+very good
+2:57
+part 2
+
+now do it with only one call to subst (by that I mean it only appears once in the Makefile )
+2:57
+one callsite
+
+
+i.e., do it with an iterative process
