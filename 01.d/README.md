@@ -56,3 +56,31 @@ one callsite
 
 
 i.e., do it with an iterative process
+
+
+
+
+
+
+
+
+
+# $(if $1, ...) -- If $1 is not empty, then...
+# $(firstword $(l)) -- where l := apple orange -- would be apple (gets first word in list)
+# $(call print_all,$(wordlist 2,$(words $1),$1))
+#
+# This is to call print_all with the list $1 without the first element, i.e., the tail of $1
+# $(wordlist) lets you select a sublist (1-based)
+# $(wordlist, start_index, length, list)
+# 
+# $(words $1) gives you the length of $1. 
+# Index 2 - $(words $1) is in index beyond the end of the list, but Make ignores this.
+# $1 - list of words to print
+print_all = \
+	$(if $1, \
+			$(info $(firstword $1)) \
+			$(call print_all,$(wordlist 2,$(words $1),$1)) \
+		)
+list := Hi there Nick, I hope this hint helps!
+all:
+	@: $(call print_all,$(list))
