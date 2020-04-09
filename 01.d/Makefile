@@ -1,4 +1,4 @@
-# 2020_04_08 word capitalizer
+# 2020_04_09 word capitalizer
 # 		Pete's Challenge
 #
 #http://patorjk.com/software/taag/#p=display&f=Big&t=Version%202
