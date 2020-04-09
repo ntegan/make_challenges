@@ -15,8 +15,7 @@
 # |_|  |_|\__,_|_|_| |_|
 
 %:
-	@:$(call capitalize4,$*)
-	$(info $(idxs))
+	@:$(call capitalize3,$*)
 
 
 
